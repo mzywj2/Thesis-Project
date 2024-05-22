@@ -23,8 +23,8 @@ This project involves a complex pipeline
 * Busco: Version
 * Compleasm: Version
 * Miniconda: Version
-* Minimap2: Version
-* Purge_dups: Version
+* Minimap2: Version 2.28
+* Purge_dups: Version 1.2.6
 
 ## Installations:
 
