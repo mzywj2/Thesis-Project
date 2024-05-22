@@ -26,6 +26,8 @@ This project involves a complex pipeline
 
 ## Installations:
 ### Miniconda:
+
+```
 #!/bin/bash
 
 Download and install Miniconda
@@ -40,7 +42,7 @@ Add Conda to your path permanently
 echo 'export PATH=$HOME/miniconda/bin:$PATH' >> ~/.bash_profile
 source ~/.bash_profile
 
-
+```
 
 ### Busco:
 
