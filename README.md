@@ -16,6 +16,8 @@ This project involves a complex pipeline
 * COFF001.asm.p_ctg.gfa
 * COFF001.asm.a_ctg.gfa
 
+### These GFA files were converted to FASTA format for downstream analysis: 
+`awk '/^S/{print ">"$2;print $3}' input.gfa  > output.fa`
 
 ## Dependencies:
 * Busco: Version
