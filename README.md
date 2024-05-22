@@ -83,8 +83,14 @@ conda activate compleasm_env
 
 ```
 
+
 #### Example Usage: 
 
+```
+# Run compleasm
+compleasm run -a /gpfs01/home/mzywj2/COFF001.asm.a_ctg.gfa.fasta -o /path/to/outdir -l brassicales -L /path/to/busco_downloads/lineages/brassicales-odb10  -t 32
+
+```
 
 For further detail regarding Compleasm, refer to the Compleasm GitHub Repository: https://github.com/huangnengCSU/compleasm.git
 
