@@ -53,6 +53,8 @@ Only after the conda environment has been created can the additional environment
 
 ### Busco:
 
+BUSCO (Benchmarking Universal Single-Copy Orthologs) is used to assess the completeness of genome assemblies, gene sets, and transcriptomes. By evaluating the presence and integrity of conserved orthologs, BUSCO provides a quantitative measure of assembly quality. 
+
 ```
 
 # Create a new Conda environment for BUSCO
@@ -69,7 +71,7 @@ For further detail regarding BUSCO, refer to the BUSCO GitHub Repository: https:
 
 ### Compleasm:
 
-Compleasm is a high-performance tool for genome assembly, designed to efficiently handle large and complex datasets. It also provides more sensitivity than BUSCO. [Reference: Neng Huang, Heng Li, compleasm: a faster and more accurate reimplementation of BUSCO. Bioinformatics, 39, btad595, 2023. https://academic.oup.com/bioinformatics/article/39/10/btad595/7284108?login=false] 
+Compleasm is a high-performance tool for genome assembly, designed to efficiently handle large and complex datasets. It also provides more sensitivity than BUSCO. 
 
 ```
 
