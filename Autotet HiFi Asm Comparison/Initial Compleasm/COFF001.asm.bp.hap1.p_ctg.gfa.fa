@@ -21,7 +21,5 @@ conda activate compleasm
 compleasm run -a /gpfs01/home/mzywj2/COFF001.asm.bp.hap1.p_ctg.gfa.fa -o /gpfs01/home/mzywj2 -l brassicales -L /gpfs01/home/mzywj2/busco_downloads/lineages/brassicales-odb10 -t 32
 
 
-# This is a HiFi assembly with --primary flag
-
 # The output directory is called brassicales_obd10_hap1 the path to this directory is: /gpfs01/home/mzywj2/brassicales_obd10_hap1
 
