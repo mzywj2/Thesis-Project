@@ -9,7 +9,7 @@ This project involves a complex pipeline
 #### 1: HiFi Assembly of the C.Officinalis without the --primary flag:
 * COFF001.asm.bp.hap1.p_ctg.gfa
 * COFF001.asm.bp.hap2.p_ctg.gfa 
-* COFF001.asm.bp.p_ctg.fa
+* COFF001.asm.bp.p_ctg.gfa
 
 #### 2: HiFi Assembly of the C.Officinalis with the --primary flag:
 * COFF001.asm.p_utg.gfa
