@@ -86,11 +86,8 @@ conda activate compleasm_env
 
 #### Example Usage: 
 
-```
-# Run compleasm
-compleasm run -a /gpfs01/home/mzywj2/COFF001.asm.a_ctg.gfa.fasta -o /path/to/outdir -l brassicales -L /path/to/busco_downloads/lineages/brassicales-odb10  -t 32
+`compleasm run -a /gpfs01/home/mzywj2/COFF001.asm.a_ctg.gfa.fasta -o /path/to/outdir -l brassicales -L /path/to/busco_downloads/lineages/brassicales-odb10  -t 32`
 
-```
 
 For further detail regarding Compleasm, refer to the Compleasm GitHub Repository: https://github.com/huangnengCSU/compleasm.git
 
@@ -108,6 +105,9 @@ conda activate minimap
 ```
 
 #### Example Usage:
+
+`minimap2 -t 32 -x map-hifit input.fasta sequencing.fastq.gz | gzip -c - > minimap_output.paf.gz`
+
 
 For further detail regarding Minimap2, refer to the Minimap2 GitHub Repository: https://github.com/lh3/minimap2.git
 
