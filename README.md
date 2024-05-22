@@ -51,11 +51,46 @@ Only after the conda environment has been created can the additional environment
 
 ### Busco:
 
+```
+
+# Create a new Conda environment for BUSCO
+conda create -y --name busco_env -c bioconda busco
+
+# Activate the newly created environment
+conda activate busco_env
+
+```
 
 ### Compleasm:
 
+```
+
+# Create the compleasm environment 
+conda create -n compleasm_env -c conda-forge -c bioconda compleasm
+
+# Activate the environment 
+conda activate compleasm_env
+
+```
 
 ### Minimap2:
 
+```
+# Create Minimap2 environment
+conda create -y --name minimap -c bioconda minimap2
+
+# Activate the environment
+conda activate minimap
+
+```
 
 ### Purge_dups:
+
+```
+# Create Purge_dups environment
+Conda create -n purge_dups_env -c bioconda purge_dups=1.2.6
+
+# Activate the environment
+Conda activate purge_dups_env
+
+```
