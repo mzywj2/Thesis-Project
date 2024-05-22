@@ -88,6 +88,8 @@ For further detail regarding Compleasm, refer to the Compleasm GitHub Repository
 
 ### Minimap2:
 
+Minimap2 is a sequence alignment tool that that maps DNA or mRNA sequences against large reference databases. Minimap2 supports various types of sequencing data, including long reads (PacBio, Oxford Nanopore) and short reads (Illumina).
+
 ```
 # Create Minimap2 environment
 conda create -y --name minimap -c bioconda minimap2
@@ -116,3 +118,9 @@ Conda activate purge_dups_env
 #### Example Usage:
 
 For further detail regarding Purge dups, refer to the Purge dups GitHub Repository: https://github.com/dfguan/purge_dups.git
+
+
+
+## Acknowledgments: 
+
+Compleasm: Huang N, Li H. (2023) Compleasm: a faster and more accurate reimplementation of BUSCO. *Bioinformatics*. Volume 39, Issue 10. [https://academic.oup.com/bioinformatics/article/39/10/btad595/7284108?login=false]
