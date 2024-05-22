@@ -20,9 +20,9 @@ This project involves a complex pipeline
 `awk '/^S/{print ">"$2;print $3}' input.gfa  > output.fa`
 
 ## Dependencies:
-* Busco: Version
-* Compleasm: Version
-* Miniconda: Version
+* Busco: Version 
+* Compleasm: Version 0.2.6
+* Conda: Version 24.5.0
 * Minimap2: Version 2.28
 * Purge_dups: Version 1.2.6
 
