@@ -25,8 +25,9 @@ This project involves a complex pipeline
 * Purge_dups
 
 ## Installations:
-### Miniconda:
 
+### Miniconda:
+To your home directory produce a script for miniconda installation, once it has been produced it can be submitted through `sbatch` and follow the instructions on the screen
 ```
 #!/bin/bash
 
@@ -43,6 +44,10 @@ echo 'export PATH=$HOME/miniconda/bin:$PATH' >> ~/.bash_profile
 source ~/.bash_profile
 
 ```
+
+
+Only after the conda environment has been created can the additional environments/software tools you require be added
+
 
 ### Busco:
 
