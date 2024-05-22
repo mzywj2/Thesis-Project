@@ -18,11 +18,11 @@ This project involves a complex pipeline
 
 
 ## Dependencies:
-* Busco
-* Compleasm
-* Miniconda
-* Minimap2
-* Purge_dups
+* Busco: Version
+* Compleasm: Version
+* Miniconda: Version
+* Minimap2: Version
+* Purge_dups: Version
 
 ## Installations:
 
@@ -61,6 +61,10 @@ conda activate busco_env
 
 ```
 
+Busco will not be used in this study but its installation was required to acquire the BUSCO lineages (specifically the brassicales-obd10 lineage) that will be utilised for Compleasm Analysis. 
+
+For further detail regarding BUSCO, refer to the BUSCO GitHub Repository: https://github.com/metashot/busco.git 
+
 ### Compleasm:
 
 ```
@@ -73,6 +77,11 @@ conda activate compleasm_env
 
 ```
 
+#### Example Usage: 
+
+
+For further detail regarding Compleasm, refer to the Compleasm GitHub Repository: https://github.com/huangnengCSU/compleasm.git
+
 ### Minimap2:
 
 ```
@@ -84,6 +93,11 @@ conda activate minimap
 
 ```
 
+#### Example Usage:
+
+For further detail regarding Minimap2, refer to the Minimap2 GitHub Repository: https://github.com/lh3/minimap2.git
+
+
 ### Purge_dups:
 
 ```
@@ -94,3 +108,7 @@ Conda create -n purge_dups_env -c bioconda purge_dups=1.2.6
 Conda activate purge_dups_env
 
 ```
+
+#### Example Usage:
+
+For further detail regarding Purge dups, refer to the Purge dups GitHub Repository: https://github.com/dfguan/purge_dups.git
