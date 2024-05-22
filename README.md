@@ -16,7 +16,7 @@ This project involves a complex pipeline
 * COFF001.asm.p_ctg.gfa
 * COFF001.asm.a_ctg.gfa
 
-##### These GFA files were converted to FASTA format for downstream analysis: 
+#### These GFA files were converted to FASTA format for downstream analysis: 
 `awk '/^S/{print ">"$2;print $3}' input.gfa  > output.fa`
 
 ## Dependencies:
@@ -68,6 +68,8 @@ Busco will not be used in this study but its installation was required to acquir
 For further detail regarding BUSCO, refer to the BUSCO GitHub Repository: https://github.com/metashot/busco.git 
 
 ### Compleasm:
+
+Compleasm is a high-performance tool for genome assembly, designed to efficiently handle large and complex datasets. It also provides more sensitivity than BUSCO. [Reference: Neng Huang, Heng Li, compleasm: a faster and more accurate reimplementation of BUSCO. Bioinformatics, 39, btad595, 2023. https://academic.oup.com/bioinformatics/article/39/10/btad595/7284108?login=false] 
 
 ```
 
