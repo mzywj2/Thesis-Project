@@ -106,6 +106,8 @@ For further detail regarding Minimap2, refer to the Minimap2 GitHub Repository: 
 
 ### Purge_dups:
 
+Purge_Dups is a tool designed to identify and remove duplicate contigs from genome assemblies. By analysing read depth and sequence similarity, Purge_Dups effectively distinguishes between genuine duplications and assembly artifacts. This improves the quality and accuracy of genome assemblies.
+
 ```
 # Create Purge_dups environment
 Conda create -n purge_dups_env -c bioconda purge_dups=1.2.6
