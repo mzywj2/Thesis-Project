@@ -129,8 +129,12 @@ Conda activate purge_dups_env
 
 For further detail regarding Purge dups, refer to the Purge dups GitHub Repository: https://github.com/dfguan/purge_dups.git
 
+### N50.sh Script
 
+This script is used to evaluate more quality metrics for the HiFi assemblies and this script is from: [https://github.com/hcdenbakker/N50.sh.git] 
 
 ## Acknowledgments: 
 
 Compleasm: Huang N, Li H. (2023) Compleasm: a faster and more accurate reimplementation of BUSCO. *Bioinformatics*. Volume 39, Issue 10. [https://academic.oup.com/bioinformatics/article/39/10/btad595/7284108?login=false]
+
+N50.sh: [https://github.com/hcdenbakker/N50.sh.git]
