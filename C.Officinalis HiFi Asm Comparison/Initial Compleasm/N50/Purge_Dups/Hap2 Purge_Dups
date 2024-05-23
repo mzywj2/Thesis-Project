@@ -46,7 +46,7 @@ calcuts $STATS > $CUTOFFS
 split_fa $ASSEMBLY > $SPLIT_ASSEMBLY
 
 # Align reads to the split assembly
-minimap2 -x map-hifi -t 32 $SPLIT_ASSEMBLY $READS | gzip -c > $SPLIT_ALIGNMENTS
+minimap2 -x map-hifi -t 32 $SPLIT_ASSEMBLY $READS | gzip -c - > $SPLIT_ALIGNMENTS
 
 # Purge duplicates based on the cutoffs
 purge_dups -2 -T $CUTOFFS -c $BASE_COV $SPLIT_ALIGNMENTS > $DUPS
