@@ -172,6 +172,10 @@ conda create -n mummer4_env -c bioconda mummer4
 conda activate mummer4_env
 ```
 
+This step of the analysis also requires the installation of python and numpy in the mummer4_env (activate this environment first):
+` conda install python`  
+`conda install numpy`
+
 #### Example Usage:
 
 `nucmer --mum -l 100 -c 500 --prefix output_prefix reference.fa assembly.fa`
