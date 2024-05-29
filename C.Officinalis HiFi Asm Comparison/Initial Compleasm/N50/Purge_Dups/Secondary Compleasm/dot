@@ -1,0 +1,7 @@
+
+# 
+wget https://raw.githubusercontent.com/MariaNattestad/dot/master/DotPrep.py
+
+# Run the command 
+python DotPrep.py --delta  p_ctg_vs_excelsa.delta --out 
+python DotPrep.py --delta  hap2_vs_excelsa.delta --out 
