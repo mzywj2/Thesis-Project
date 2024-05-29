@@ -170,12 +170,13 @@ conda create -n mummer4_env -c bioconda mummer4
 
 # Activate the environment
 conda activate mummer4_env
-
 ```
 
 #### Example Usage:
 
-`nucmer --mum -l 100 -c 500 --prefix output_prefix reference.fa assemblt.fa`
+`nucmer --mum -l 100 -c 500 --prefix output_prefix reference.fa assembly.fa`
+
+For further detail regarding MUMmer4, refer to the MUMmer4 GitHub Repository: https://github.com/mummer4/mummer.git 
 
 ## Acknowledgments: 
 
