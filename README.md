@@ -173,6 +173,7 @@ conda activate mummer4_env
 ```
 
 This step of the analysis also requires the installation of python and numpy in the mummer4_env (activate this environment first):
+
 ` conda install python`  
 `conda install numpy`
 
