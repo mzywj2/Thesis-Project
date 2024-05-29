@@ -25,6 +25,7 @@ This project involves a complex pipeline
 * Conda: Version 24.5.0
 * Minimap2: Version 2.28
 * Purge_dups: Version 1.2.6
+* Mummer4: Version 4.0.0
 
 ## Installations:
 
@@ -127,11 +128,54 @@ Conda activate purge_dups_env
 
 #### Example Usage:
 
+```
+# Run minimap2 to get alignments
+minimap2 -x map-hifi -t 32 assembly.fa reads.fastq.gz | gzip -c - > alignment.paf.gz
+
+# Run purge_dups pipeline
+
+# Generate statistics from the alignment
+pbcstat alignment.paf.gz
+
+# Calculate cutoffs based on the statistics
+calcuts PB.stat > prefix_cutoffs
+
+# Split the assembly
+split_fa assembly.fa > split_assembly.fa
+
+# Align reads to the split assembly
+minimap2 -x map-hifi -t 32 split_assembly.fa reads.fastq.gz | gzip -c > split_alignment.paf.gz
+
+# Purge duplicates based on the cutoffs
+purge_dups -2 -T prefix_cutoffs -c PB.base.cov split_alignment.paf.gz > prefix_dups
+
+# Get sequences after purging duplicates
+get_seqs prefix_dups assembly.fa > purged_assembly.fa
+
+```
+
 For further detail regarding Purge dups, refer to the Purge dups GitHub Repository: https://github.com/dfguan/purge_dups.git
 
 ### N50.sh Script
 
 This script is used to evaluate more quality metrics for the HiFi assemblies and this script is from: [https://github.com/hcdenbakker/N50.sh.git] 
+
+
+### Mummer4:
+MUMmer4 is designed for efficient and accurate alignment of large DNA or RNA sequences. It is commonly used to compare genomes or long-read sequencing data and it provides tools for aligning entire genomes, identifying similarities and differences, and visualizing genomic data.
+
+```
+# Create mummer4 environment 
+conda create -n mummer4_env -c bioconda mummer4
+
+# Activate the environment
+conda activate mummer4_env
+
+```
+
+#### Example Usage:
+
+`nucmer --mum -l 100 -c 500 --prefix output_prefix reference.fa assemblt.fa`
 
 ## Acknowledgments: 
 
