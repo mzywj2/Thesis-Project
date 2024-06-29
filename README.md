@@ -19,6 +19,11 @@ This project involves a complex pipeline
 #### These GFA files were converted to FASTA format for downstream analysis: 
 `awk '/^S/{print ">"$2;print $3}' input.gfa  > output.fa`
 
+
+## Input VCF file which contains the populations required in the PCA:
+* 4dg_s1to6_bi_best_snps_pruned.ann.vcf
+
+
 ## Dependencies:
 * Bcftools: Version 1.20
 * Busco: Version 5.6.1
