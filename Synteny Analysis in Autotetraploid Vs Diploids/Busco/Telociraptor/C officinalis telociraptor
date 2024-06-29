@@ -1,0 +1,2 @@
+# navigate to the directory that has the .py file and then run the command on the command line
+python telociraptor.py -seqin /gpfs01/home/mzywj2/COFF001.asm.p_ctg.gfa.fasta -basefile C_off_whole i=-1 tweak=F telonull=T
