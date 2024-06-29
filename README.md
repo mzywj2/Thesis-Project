@@ -356,7 +356,7 @@ A[HiFi Data] --> B[GFA to FASTA conversion];
     B --> C[Initial Compleasm];
     C --> D[Run n50.sh];
     D --> E[Hap2 and p_ctg FASTA files have best quality];
-    E --> F[Run Purge Dups on these two fasta files];
+    E --> F[Run Purge Dups on these two];
     F --> G[Secondary Compleasm];
     G --> H[Run n50.sh again];
     H --> I[Conclusion: COFF001.asm.p_ctg.gfa.fasta = reference genome];
