@@ -71,7 +71,12 @@ conda activate busco
 
 ```
 
-Busco will not be used in this study but its installation was required to acquire the BUSCO lineages (specifically the brassicales-obd10 lineage) that will be utilised for Compleasm Analysis. 
+The BUSCO lineages that will be used in this study is the brassicales-obd10 lineage, this will also be utilised for Compleasm Analysis. 
+
+#### Example Usage:
+
+` busco -i input.fasta   -o busco_output_name -l /path/to/the/busco_downloads/lineages/brassicales -m genome -c 8`
+
 
 For further detail regarding BUSCO, refer to the BUSCO GitHub Repository: https://github.com/metashot/busco.git 
 
@@ -222,6 +227,7 @@ python telociraptor.py -seqin /path/to/file/COFF001.asm.p_ctg.gfa.fasta -basefil
 
 - The  `telonull=T` is recommended to produce the relevant inputs for Chromsyn
 
+For further detail regarding Telociraptor, refer to the Telociraptor GitHub Repository: https://github.com/slimsuite/telociraptor.git
 
 ### TIDK: 
 
@@ -245,6 +251,8 @@ However, in order to use the output of TIDK as an input file for Chromsyn, the t
 awk 'BEGIN {FS="\t"; OFS=","} {$1=$1} 1' Cochlearia_off_whole_telomeric_repeat_windows.tsv > Cochlearia_off_whole_telomeric_repeat_windows.csv
 
 ```
+
+For further detail regarding TIDK, refer to the TIDK GitHub Repository: https://github.com/tolkit/telomeric-identifier.git
 
 ### Chromsyn:
 
@@ -272,6 +280,7 @@ In the R terminal (not the console), run the command `Rscript chromsyn.R`
 - If the output pdf or png file do not produce an image of a proper synteny plot, then re-run the command with this addition: `Rscript chromsyn.R orphans=F` (Personally recommended to me by the creator of the tool, Richard Edwards)
 - The `orphans=F` argument removes from the plot any sequences that do not have syntenic regions, it will remove all the short contigs/scaffolds that lack BUSCO genes. Since the genomes used in this study were very large and more diverse than expected, this argument was required to produce a proper synteny plot
 
+For further details regarding Chromsyn, refer to the Chromsyn GitHub Repository: https://github.com/slimsuite/chromsyn.git
 
 ### Bcftools:
 
@@ -325,7 +334,7 @@ gatk SelectVariants \
 ## Acknowledgments: 
 
 Chromysn:
-- Also a special thank you to Richard Edwards for personally helping with correcting issues that were encountered when trying to run Chromsyn.
+- A special thank you to Richard Edwards for personally helping with correcting issues that were encountered when trying to run Chromsyn.
 
 Compleasm: Huang N, Li H. (2023) Compleasm: a faster and more accurate reimplementation of BUSCO. *Bioinformatics*. Volume 39, Issue 10. [https://academic.oup.com/bioinformatics/article/39/10/btad595/7284108?login=false]
 
