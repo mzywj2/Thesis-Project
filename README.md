@@ -30,6 +30,10 @@ In this VCF the relevant tetraploid populations that will be extracted and compa
 * ROT Population - ROT_7
 * FTW Population - FTW_3
 
+### PCA Script:
+
+The script used to produce the PCA plots is the est_cov_pca.R script by Toumas Hamala, April 2024 - GitHub Repository: https://github.com/thamala/polySV.git
+There are slight changes in the script that have been mentioned in the PCA Plot folder scripts - removal of the geom_repel line to remove the labels in one output as well as the adjustment of the ggtitle, axis.title size and plot.title size. 
 
 ## Dependencies:
 * Bcftools: Version 1.20
