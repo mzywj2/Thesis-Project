@@ -2,6 +2,18 @@
 
 # Create directories in R studios for the relevant comparisons and copy these files into those directories
 
+# Ensure that all the relevant files are in the correct directory:
+# - Busco output and busco.fofn
+# - Telociraptor *gaps.tdt and *telomeres.tdt outputs and gaps.fofn and sequences.fofn
+# - TIDK *telomeric_repeat_windows.csv output and tidk.fofn
+
+# The comparisons are:
+# C_officinalis vs C_excelsa
+# C_officinalis vs C_groenlandica
+# C_officinalis vs C_aestuaria
+# C_officinalis vs C_pyrenica 
+# Therefore create the relevant directories for these analyses
+
 # To run Chromsyn on R studio, ensure you run it on the terminal and not the console in R studios
 # First run the command without additional arguments to see what kind of plot the output produces (if a proper synteny plot is produced)
 Rscript chromsyn.R
