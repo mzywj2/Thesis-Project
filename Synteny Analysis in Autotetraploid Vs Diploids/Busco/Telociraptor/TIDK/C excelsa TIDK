@@ -7,3 +7,6 @@ tidk search -s TTAGGG -o Cochlearia_exc -d /gpfs01/home/mzywj2 --extension tsv /
 # In order to use this as an input file for chromsyn, the tsv file must be converted into a csv file
 awk 'BEGIN {FS="\t"; OFS=","} {$1=$1} 1' Cochlearia_exc_telomeric_repeat_windows.tsv > C_excelsa_telomeric_repeat_windows.csv
 
+# C officinalis will be compared against C excelsa by chromsyn
+# Move this file into the relevant R studios directory, ready for use by chromsyn
+
