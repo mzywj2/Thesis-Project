@@ -263,7 +263,7 @@ For further detail regarding TIDK, refer to the TIDK GitHub Repository: https://
 
 ### Chromsyn:
 
-Chromsyn is an R tool used for the comparative analysis and visualization of chromosome synteny, which refers to the preserved order of genes on chromosomes of different species or within different assemblies of the same species.It helps in identifying and analyzing regions of conserved gene order, structural variations, and rearrangements between genomes.
+Chromsyn is an R studios tool used for the comparative analysis and visualization of chromosome synteny, which refers to the preserved order of genes on chromosomes of different species or within different assemblies of the same species.It helps in identifying and analyzing regions of conserved gene order, structural variations, and rearrangements between genomes.
 
 Since Chromsyn is used in R, it does not have specific installation steps, however if these instructions below are followed, Chromsyn will run without error: 
 - Create a directory in R
