@@ -5,5 +5,7 @@ conda activate telociraptor_env
 # Then run the telociraptor command from that directory on the command line
 python telociraptor.py -seqin /gpfs01/home/mzywj2/COFF001.asm.p_ctg.gfa.fasta -basefile C_off_whole i=-1 tweak=F telonull=T
 
-
 # The output files will be available in the same directory that the telociraptor.py file is located in
+# The relevant output files end in *gaps.tdt and *telomeres.tdt
+# Name them C_officinalis.gaps.tdt and C_officinalis.telomeres.tdt
+# Move them into a new directory in R studios, ready for use by chromsyn
