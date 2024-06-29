@@ -359,7 +359,7 @@ A[HiFi Data] --> B[GFA to FASTA conversion];
     E --> F[Run Purge Dups on these two fasta files];
     F --> G[Secondary Compleasm];
     G --> H[Run n50.sh again];
-    H --> I[Final conclusion: Use the p_ctg.fasta as the reference genome];
+    H --> I[Final conclusion: Use the COFF001.asm.p_ctg.gfa.fasta as the reference genome];
 
 ```
 
