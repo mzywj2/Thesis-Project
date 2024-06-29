@@ -1,0 +1,6 @@
+# Activate the TIDK environment if not already activated
+conda activate tidk_env
+
+# Run the command 
+
+# In order to 
