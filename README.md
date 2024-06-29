@@ -353,9 +353,9 @@ gatk SelectVariants \
 ```
 mermaid
 graph LR
-A[Data] --> B[GFA to FASTA conversion]
-    B --> C[Initial Compleasm]
-    C --> D[Run n50.sh]
+A[Data] --> B[GFA to FASTA conversion];
+    B --> C[Initial Compleasm];
+    C --> D[Run n50.sh];
 ```
 
 
