@@ -3,4 +3,4 @@ conda activate tidk_env
 
 # Run the command 
 
-# In order to 
+# In order to use this as an input file for chromsyn, the tsv file must be converted into a csv file
