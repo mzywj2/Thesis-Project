@@ -1,4 +1,4 @@
-# Activate the telociraptor environment
+# Activate the telociraptor environment if not already activated
 conda activate telociraptor_env
 
 # navigate to the directory that has the .py file, (this was found in the code subdirectory in the telociraptor directory)
