@@ -1,6 +1,6 @@
 # Thesis-Project: Comparative Genomic Analysis of Cochlearia Officinalis and Diploid Cochlearia Species
 
-This project involves a complex pipeline
+This project involves the comprehensive analysis of genome assemblies for the autotetraploid species *Cochlearia officinalis*. Two types of HiFi assemblies were initially provided for the same species and their genome completeness was evaluated to determine the optimal assembly for downstream analysis. Quality assessments were conducted using Compleasm, N50.sh, and Purge Dups, leading to the selection of the best reference genome from six assemblies. This reference genome was then utilised for synteny analysis against various *Cochlearia* diploid species to identify the parent species through Chromsyn analysis, producing synteny plots for each diploid comparison. Additionally, leveraging a VCF dataset, we identified five autotetraploid populations of C. officinalis and conducted PCA with each tetraploid population against 26 diploid populations (145 individual samples) to assess geographical closeness and species relatedness.  This multi-faceted approach aims to elucidate the genetic similarity/variations of *Cochlearia Officinalis* against other *Cochlearia* diploid species to ultimatley try and identify the parental lineage of *Cochlearia Officinalis*. 
 
 
 ## Inital HiFi Assembly Data
