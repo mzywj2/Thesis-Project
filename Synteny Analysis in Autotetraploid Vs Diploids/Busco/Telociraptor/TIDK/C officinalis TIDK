@@ -6,3 +6,5 @@ tidk search -s TTAGGG -o Cochlearia_off_whole -d /gpfs01/home/mzywj2 --extension
 
 # In order to use this as an input file for chromsyn, the tsv file must be converted into a csv file
 awk 'BEGIN {FS="\t"; OFS=","} {$1=$1} 1' Cochlearia_off_whole_telomeric_repeat_windows.tsv > Cochlearia_off_whole_telomeric_repeat_windows.csv
+
+# As this is the reference genome, this autotetraploid will be being compared against the other diploids separately. Therefore this file should be copied/moved into the relevant directories made for chromsyn analysis in R studios
