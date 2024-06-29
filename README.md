@@ -23,6 +23,13 @@ This project involves a complex pipeline
 ## Input VCF file which contains the populations required in the PCA:
 * 4dg_s1to6_bi_best_snps_pruned.ann.vcf
 
+In this VCF the relevant tetraploid populations that will be extracted and compared against 26 other diploid populations (145 individual samples) are:
+* LNL Population - LNL_8
+* ERS Population - ERS_2
+* TRO Population - TRO_5
+* ROT Population - ROT_7
+* FTW Population - FTW_3
+
 
 ## Dependencies:
 * Bcftools: Version 1.20
