@@ -268,8 +268,9 @@ Since Chromsyn is used in R, it does not have specific installation steps, howev
 - Busco full_table.tsv output file - alter the file name to $genome_busco5.tsv ($genome: change the prefix respectively for each genome you analyse e.g. C_officinalis_busco5.tsv)
 - Telociraptor *gaps.tdt and *telomeres.tdt - alter the prefix of the file name respectively for each genome
 - TIDK output tsv converted to a csv - *telomeric_repeat_windows.csv - alter the prefix of the file name respectively for each genome
-- FOFN (file of file names) files for each of the input files - busco.fofn, gaps.fofn, sequences.fofn (for the *telomeres.tdt files) and tidk.fofn. If, as recommended above all the input files are placed in the same directory as the chromsyn.R script then the fofn file should layout like this:
+- FOFN (file of file names) files for each of the input files - busco.fofn, gaps.fofn, sequences.fofn (for the *telomeres.tdt files) and tidk.fofn. If, as recommended above all the input files are placed in the same directory as the chromsyn.R script then the fofn file layout should look like this:
 C_officinalis C_officinalis_telomeric_repeat_windows.csv
+
 C_groenlandica C_groenlandica_telomeric_repeat_windows.csv
 - However, if you chose to place the input files in a different directory then the paths to those files should be written in the fofn file e.g:
 C_officinalis /absolute/path/to/the/file/C_officinalis_telomeric_repeat_windows.csv
