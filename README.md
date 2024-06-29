@@ -369,15 +369,16 @@ A[HiFi Data] --> B[GFA to FASTA conversion];
 #### This is for the comparison of the autotetraploid *Cochlearia Officinalis* against the diploid species individually for each species: Cochlearia Pyrenica, Cochlearia Groenlandica, Cochlearia Excelsa and Cochlearia Aestuaria
 
 ```mermaid
-graph LR;
+graph TD;
 A[Diploids & Tetraploid fasta files] --> B[Busco];
     B --> C[Run Telociraptor on fasta files];
     C --> D[Run TIDK on fasta files];
     D --> E[Convert TIDK tsv file to csv];
     E --> F[Produce FOFN files for the input files;
-    F --> G[Download Chromsyn.R and rje_load.R into R studios directory];
+    F --> G[Download Chromsyn and rje_load scripts into R studios directory];
     G --> H[Rscript chromsyn.R orphans=F];
     H --> I[Output synteny plot];
+
 ```
 
 ## Acknowledgments: 
