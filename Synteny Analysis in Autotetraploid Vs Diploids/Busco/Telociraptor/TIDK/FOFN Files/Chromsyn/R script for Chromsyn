@@ -1,0 +1,10 @@
+# Download the chromsyn.R and rje_load.R scripts from the chromsyn GitHub page: https://github.com/slimsuite/chromsyn.git
+
+# Create directories in R studios for the relevant comparisons and copy these files into those directories
+
+# To run Chromsyn on R studio, ensure you run it on the terminal and not the console in R studios
+# First run the command without additional arguments to see what kind of plot the output produces (if a proper synteny plot is produced)
+Rscript chromsyn.R
+
+# However, if the plot does not look like a proper synteny plot as the example given in the Chromsyn GitHub page, then add this argument to the command. This argument will remove from the plot any sequences that do not have syntenic regions. 
+Rscript chromsyn.R orphans=f
