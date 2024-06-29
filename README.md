@@ -352,9 +352,14 @@ gatk SelectVariants \
 
 ```mermaid
 graph LR;
-A[Data] --> B[GFA to FASTA conversion];
+A[HiFi Data] --> B[GFA to FASTA conversion];
     B --> C[Initial Compleasm];
     C --> D[Run n50.sh];
+    D --> E[Hap2 and p_ctg FASTA files have "best quality"];
+    E --> F[Run Purge Dups on these two fasta files];
+    F --> G[Secondary Compleasm];
+    G --> H[Run n50.sh again];
+    H --> I[Final conclusion: Use the p_ctg.fasta as the reference genome];
 
 ```
 
