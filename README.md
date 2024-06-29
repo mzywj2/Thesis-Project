@@ -252,7 +252,7 @@ Chromsyn is an R tool used for the comparative analysis and visualization of chr
 
 Since Chromsyn is used in R, it does not have specific installation steps, however if these instructions below are followed, Chromsyn will run without error: 
 - Create a directory in R
-- Ensure the rje_load.R and chromsyn.R files are placed in the created directory
+- Ensure the rje_load.R and chromsyn.R files (available from https://github.com/slimsuite/chromsyn.git) are placed in the created directory
 - Place all the input files in the same directory
 - Ensure the genome input file names are consistent for each one e.g. if it is for the C_officinalis genome, ensure all the input files start with C_officinalis
 
@@ -287,6 +287,9 @@ conda activate bcftools
 
 ```
 
+In order to produce a list of the populations that are present in the vcf:
+`bcftools query -l input.vcf`
+
 
 ### Gatk:
 
@@ -301,6 +304,24 @@ conda create -y --name gatk_env -c bioconda gatk4
 conda activate gatk_env
 
 ```
+
+#### Example Usage:
+
+```
+gatk SelectVariants \
+-V /path/to/vcf file/4dg_s1to6_bi_best_snps_pruned.ann.vcf \
+-sn LNL_8 \
+-sn ARN_1 -sn ARN_2 -sn ARN_3 -sn ARN_4 \
+-sn AUV_1 -sn AUV_2 -sn AUV_3 -sn AUV_4 -sn AUV_5 -sn AUV_6 -sn AUV_7 -sn AUV_8 \
+-O /output/directory/path/LNL_filtered.vcf
+
+```
+
+`-V` - input.vcf
+`-sn` - sample/population name
+`-O` - output.vcf
+
+
 ## Acknowledgments: 
 
 Chromysn:
