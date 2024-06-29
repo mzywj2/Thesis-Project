@@ -20,12 +20,17 @@ This project involves a complex pipeline
 `awk '/^S/{print ">"$2;print $3}' input.gfa  > output.fa`
 
 ## Dependencies:
-* Busco: Version 
+* Bcftools: Version 1.20
+* Busco: Version 5.6.1
+* Chromsyn: Version 1.3.0
 * Compleasm: Version 0.2.6
 * Conda: Version 24.5.0
+* Gatk: Version 4.5.0.0
 * Minimap2: Version 2.28
-* Purge_dups: Version 1.2.6
 * Mummer4: Version 4.0.0
+* Purge_dups: Version 1.2.6
+* Telociraptor: Version 0.8.0
+* TIDK: Version 0.2.41
 
 ## Installations:
 
@@ -59,10 +64,10 @@ BUSCO (Benchmarking Universal Single-Copy Orthologs) is used to assess the compl
 ```
 
 # Create a new Conda environment for BUSCO
-conda create -y --name busco_env -c bioconda busco
+conda create -y --name busco -c bioconda busco
 
 # Activate the newly created environment
-conda activate busco_env
+conda activate busco
 
 ```
 
@@ -162,6 +167,7 @@ This script is used to evaluate more quality metrics for the HiFi assemblies and
 
 
 ### Mummer4:
+
 MUMmer4 is designed for efficient and accurate alignment of large DNA or RNA sequences. It is commonly used to compare genomes or long-read sequencing data and it provides tools for aligning entire genomes, identifying similarities and differences, and visualizing genomic data.
 
 ```
@@ -170,6 +176,7 @@ conda create -n mummer4_env -c bioconda mummer4
 
 # Activate the environment
 conda activate mummer4_env
+
 ```
 
 This step of the analysis also requires the installation of python and numpy in the mummer4_env (activate this environment first):
@@ -183,7 +190,82 @@ This step of the analysis also requires the installation of python and numpy in 
 
 For further detail regarding MUMmer4, refer to the MUMmer4 GitHub Repository: https://github.com/mummer4/mummer.git 
 
+
+### Telociraptor: 
+
+Telociraptor is a genome assembly editing tool that predicts telomeres at the ends of assembly scaffolds. Telociraptor also generates an assembly map with contig positions and gap lengths, fixes scaffolding errors based on telomere predictions, and can produce outputs used by ChromSyn.
+
+```
+
+# Create a telociraptor environment
+conda create -n telociraptor_env python=3.8
+
+# Clone the GitHub page for it
+git clone https://github.com/slimsuite/telociraptor.git
+
+# Install the dependencies
+pip install pandas biopython numpy
+
+# Activate the environment
+conda activate telociraptor_env
+
+```
+
+#### Example Usage:
+
+
+
+### TIDK: 
+
+Telomere Identification and Discovery Kit, is a toolkit designed for the identification and analysis of telomeres within genome assemblies. It detects telomeric sequences, assess their integrity, and provide detailed reports on their locations and structures within the genome. The output of TIDK is also used by Chromsyn.
+
+```
+# Create the TIDK environment
+conda create --name tidk_env -c bioconda tidk
+
+# Activate the environment
+conda activate tidk_env
+
+```
+
+### Chromsyn:
+
+Chromsyn is a tool used for the comparative analysis and visualization of chromosome synteny, which refers to the preserved order of genes on chromosomes of different species or within different assemblies of the same species.It helps in identifying and analyzing regions of conserved gene order, structural variations, and rearrangements between genomes.
+
+
+
+### Bcftools:
+
+BCFtools is a suite of utilities for processing and analyzing variant call format (VCF) and binary variant call format (BCF) files. It provides various functionalities including filtering, merging, and querying of VCF/BCF files. It is efficient and capable of handling large datasets.
+
+```
+
+# Create the bcftools environment
+conda create --name bcftools -c bioconda bcftools
+
+# Activate the environment
+conda activate bcftools
+
+```
+
+
+### Gatk:
+
+The Genome Analysis Toolkit, is a comprehensive software package developed for analysing high-throughput sequencing data.GATK provides a wide range of tools for tasks such as data pre-processing, quality control, variant calling, and variant filtering.
+
+```
+
+# Create the bcftools environment
+conda create -y --name gatk_env -c bioconda gatk4
+
+# Activate the environment 
+conda activate gatk_env
+
+```
 ## Acknowledgments: 
+
+Chromysn:
+- Also a special thank you to Richard Edwards for personally helping with correcting issues that were encountered when trying to run Chromsyn.
 
 Compleasm: Huang N, Li H. (2023) Compleasm: a faster and more accurate reimplementation of BUSCO. *Bioinformatics*. Volume 39, Issue 10. [https://academic.oup.com/bioinformatics/article/39/10/btad595/7284108?login=false]
 
