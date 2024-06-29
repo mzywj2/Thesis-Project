@@ -338,6 +338,16 @@ gatk SelectVariants \
 `-O` - output.vcf
 
 
+## Pipeline for Initial HiFi Assembly Data Quality Assessment and Choosing the Reference Genome for *Cochlearia Officinalis*:
+
+
+
+
+## Pipeline for the comparison of other *Cochlearia* species against the *C Officinalis* reference genome:
+
+
+
+
 ## Acknowledgments: 
 
 Chromysn:
