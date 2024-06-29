@@ -2,5 +2,7 @@
 conda activate tidk_env
 
 # Run the command 
+tidk search -s TTAGGG -o Cochlearia_groenlandica -d /gpfs01/home/mzywj2 --extension tsv /gpfs01/home/mzywj2/Cochlearia_groenlandica.fa
 
 # In order to use this as an input file for chromsyn, the tsv file must be converted into a csv file
+awk 'BEGIN {FS="\t"; OFS=","} {$1=$1} 1' Cochlearia_groenlandica_telomeric_repeat_windows.tsv > C_groenlandica_telomeric_repeat_windows.csv
