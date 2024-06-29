@@ -76,7 +76,7 @@ conda activate busco
 
 ```
 
-###### It is important to mention that sometimes busco is difficult to install, in that it will install into the conda environment and have its own environment but sourcing busco and running a busco script sometimes produces an error stating "No module named 'busco'". If this situation occurs and it cannot be resolved, the busco command can be run directly on the command line instead of as a script and this should produce the relevant output.
+##### It is important to mention that sometimes busco is difficult to install, in that it will install into the conda environment and have its own environment but sourcing busco and running a busco script sometimes produces an error stating "No module named 'busco'". If this situation occurs and it cannot be resolved, the busco command can be run directly on the command line instead of as a script and this should produce the relevant output.
 
 The BUSCO lineages that will be used in this study is the brassicales-obd10 lineage, this will also be utilised for Compleasm Analysis. 
 
