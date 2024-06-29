@@ -2,5 +2,7 @@
 conda activate tidk_env
 
 # Run the command 
+tidk search -s TTAGGG -o C_pyrenica_draft_new -d /gpfs01/home/mzywj2 --extension tsv /gpfs01/home/mzywj2/CPYR002.HapHiC.04.build.scaffolds.fasta
 
 # In order to use this as an input file for chromsyn, the tsv file must be converted into a csv file
+awk 'BEGIN {FS="\t"; OFS=","} {$1=$1} 1' C_pyrenica_draft_new_telomeric_repeat_windows.tsv > C_pyrenica_telomeric_repeat_windows.csv
