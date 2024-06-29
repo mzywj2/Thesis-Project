@@ -374,8 +374,8 @@ A[Diploids & Tetraploid fasta files] --> B[Busco];
     B --> C[Run Telociraptor on fasta files];
     C --> D[Run TIDK on fasta files];
     D --> E[Convert TIDK tsv file to csv];
-    E --> F[Produce FOFN files for the input files;
-    F --> G[Download chromsyn and rje load scripts into R studios directory];
+    E --> F[Produce FOFN files for the input files];
+    F --> G[Download chromsyn.R and rje_load.R scripts into R studios directory];
     G --> H[Rscript chromsyn.R orphans=F];
     H --> I[Output synteny plot];
 
