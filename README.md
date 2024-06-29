@@ -350,8 +350,7 @@ gatk SelectVariants \
 ## Pipeline for Initial HiFi Assembly Data Quality Assessment and Choosing the Reference Genome for *Cochlearia Officinalis*:
 
 
-```
-mermaid
+```mermaid
 graph LR;
 A[Data] --> B[GFA to FASTA conversion];
     B --> C[Initial Compleasm];
