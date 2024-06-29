@@ -213,11 +213,19 @@ conda activate telociraptor_env
 
 #### Example Usage:
 
+```
+
+# navigate to the directory that has the .py file and then run the command
+python telociraptor.py -seqin /path/to/file/COFF001.asm.p_ctg.gfa.fasta -basefile C_off_chr1 i=-1 tweak=F telonull=T
+
+```
+
+- The  `telonull=T` is recommended to produce the relevant inputs for Chromsyn
 
 
 ### TIDK: 
 
-Telomere Identification and Discovery Kit, is a toolkit designed for the identification and analysis of telomeres within genome assemblies. It detects telomeric sequences, assess their integrity, and provide detailed reports on their locations and structures within the genome. The output of TIDK is also used by Chromsyn.
+Telomere Identification and Discovery Kit, is a toolkit designed for the identification and analysis of telomeres within genome assemblies and is also compatible with PacBio HiFi reads. It detects telomeric sequences, assess their integrity, and provide detailed reports on their locations and structures within the genome. The output of TIDK is also used by Chromsyn.
 
 ```
 # Create the TIDK environment
@@ -228,10 +236,41 @@ conda activate tidk_env
 
 ```
 
+#### Example Usage: 
+`tidk search -s TTAGGG -o Cochlearia_off_whole -d /gpfs01/home/mzywj2 --extension tsv /path/to/file/COFF001.asm.p_ctg.gfa.fasta`
+
+However, in order to use the output of TIDK as an input file for Chromsyn, the tsv output must be converted to a csv file: 
+
+```
+awk 'BEGIN {FS="\t"; OFS=","} {$1=$1} 1' Cochlearia_off_whole_telomeric_repeat_windows.tsv > Cochlearia_off_whole_telomeric_repeat_windows.csv
+
+```
+
 ### Chromsyn:
 
-Chromsyn is a tool used for the comparative analysis and visualization of chromosome synteny, which refers to the preserved order of genes on chromosomes of different species or within different assemblies of the same species.It helps in identifying and analyzing regions of conserved gene order, structural variations, and rearrangements between genomes.
+Chromsyn is an R tool used for the comparative analysis and visualization of chromosome synteny, which refers to the preserved order of genes on chromosomes of different species or within different assemblies of the same species.It helps in identifying and analyzing regions of conserved gene order, structural variations, and rearrangements between genomes.
 
+Since Chromsyn is used in R, it does not have specific installation steps, however if these instructions below are followed, Chromsyn will run without error: 
+- Create a directory in R
+- Ensure the rje_load.R and chromsyn.R files are placed in the created directory
+- Place all the input files in the same directory
+- Ensure the genome input file names are consistent for each one e.g. if it is for the C_officinalis genome, ensure all the input files start with C_officinalis
+
+#### Input files for Chromsyn:
+- Busco full_table.tsv output file - alter the file name to $genome_busco5.tsv ($genome: change the prefix respectively for each genome you analyse e.g. C_officinalis_busco5.tsv)
+- Telociraptor *gaps.tdt and *telomeres.tdt - alter the prefix of the file name respectively for each genome
+- TIDK output tsv converted to a csv - *telomeric_repeat_windows.csv - alter the prefix of the file name respectively for each genome
+- FOFN (file of file names) files for each of the input files - busco.fofn, gaps.fofn, sequences.fofn (for the *telomeres.tdt files) and tidk.fofn. If, as recommended above all the input files are placed in the same directory as the chromsyn.R script then the fofn file should layout like this:
+C_officinalis C_officinalis_telomeric_repeat_windows.csv
+C_groenlandica C_groenlandica_telomeric_repeat_windows.csv
+- However, if you chose to place the input files in a different directory then the paths to those files should be written in the fofn file e.g:
+C_officinalis /absolute/path/to/the/file/C_officinalis_telomeric_repeat_windows.csv
+
+#### To run chromsyn:
+
+In the R terminal (not the console), run the command `Rscript chromsyn.R`
+- If the output pdf or png file do not produce an image of a proper synteny plot, then re-run the command with this addition: `Rscript chromsyn.R orphans=F` (Personally recommended to me by the creator of the tool, Richard Edwards)
+- The `orphans=F` argument removes from the plot any sequences that do not have syntenic regions, it will remove all the short contigs/scaffolds that lack BUSCO genes. Since the genomes used in this study were very large and more diverse than expected, this argument was required to produce a proper synteny plot
 
 
 ### Bcftools:
