@@ -1,3 +1,25 @@
+#!/bin/bash
+
+#SBATCH --job-name=LNL_gatk
+#SBATCH --partition=defq
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=32
+#SBATCH --mem=128g
+#SBATCH --time=96:00:00
+#SBATCH --output=/gpfs01/home/mzywj2/slurm-%x-%j.out
+#SBATCH --error=/gpfs01/home/mzywj2/slurm-%x-%j.err
+
+#######################
+# PREPARE ENVIRONMENT #
+#######################
+
+# Load anaconda module and activate gatk environment
+module load anaconda-uoneasy/2023.09-0
+source ~/.bash_profile
+conda activate gatk_env
+
+# Run gatk command
+
 gatk SelectVariants \
 -V /gpfs01/home/mzywj2/4dg_s1to6_bi_best_snps_pruned.ann.vcf \
 -sn LNL_8 \
