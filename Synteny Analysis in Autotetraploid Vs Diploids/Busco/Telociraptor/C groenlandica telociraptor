@@ -1,0 +1,7 @@
+# Activate the telociraptor environmemt if not already activated
+conda activate telociraptor_env
+
+# Navigate to the directory that has the .py file and run the command on the command line
+python telociraptor.py -seqin /gpfs01/home/mzywj2/Cochlearia_groenlandica.fa -basefile C_groe i=-1 tweak=F telonull=T
+
+# The output files are located in the same directory as the .py file
