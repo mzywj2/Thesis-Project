@@ -1,0 +1,30 @@
+gatk SelectVariants \
+-V /gpfs01/home/mzywj2/4dg_s1to6_bi_best_snps_pruned.ann.vcf \
+-sn LNL_8 \
+-sn ARN_1 -sn ARN_2 -sn ARN_3 -sn ARN_4 \
+-sn AUV_1 -sn AUV_2 -sn AUV_3 -sn AUV_4 -sn AUV_5 -sn AUV_6 -sn AUV_7 -sn AUV_8 \
+-sn BEI_1 -sn BEI_2 -sn BEI_3 -sn BEI_4 -sn BEI_5 -sn BEI_6 -sn BEI_7 -sn BEI_8 -sn BEI_9 -sn BEI_10 \
+-sn BER_1 -sn BER_2 -sn BER_3 -sn BER_4 \
+-sn BNK_21 \
+-sn CHA_1 -sn CHA_2 \
+-sn DIE_1 -sn DIE_2 -sn DIE_3 \
+-sn FAU_1 -sn FAU_2 -sn FAU_3 -sn FAU_4 \
+-sn GAL_1 -sn GAL_2 -sn GAL_3 -sn GAL_4 -sn GAL_5 -sn GAL_6 -sn GAL_7 -sn GAL_8 \
+-sn GAN_1 -sn GAN_2 -sn GAN_3 -sn GAN_4 -sn GAN_5 -sn GAN_6 -sn GAN_7 -sn GAN_8 \
+-sn JAZ_1 -sn JAZ_2 -sn JAZ_3 -sn JAZ_4 -sn JAZ_5 -sn JAZ_6 -sn JAZ_7 -sn JAZ_8 \
+-sn JOR_1 -sn JOR_3 -sn JOR_12 -sn JOR_13 \
+-sn LAB_1 -sn LAB_2 -sn LAB_3 -sn LAB_4 -sn LAB_5 -sn LAB_6 -sn LAB_7 -sn LAB_8 \
+-sn LUT_1 -sn LUT_2 -sn LUT_3 -sn LUT_4 -sn LUT_5 -sn LUT_6a -sn LUT_6b -sn LUT_7 -sn LUT_8 \
+-sn NEN_1 -sn NEN_200 -sn NEN_3 -sn NEN_300 -sn NEN_4 -sn NEN_5 -sn NEN_6 \
+-sn ODN_1 -sn ODN_2 -sn ODN_4 -sn ODN_5 -sn ODN_6 -sn ODN_7 -sn ODN_9 -sn ODN_10 \
+-sn PUY_1 -sn PUY_2 -sn PUY_3 -sn PUY_4 \
+-sn PYR_1 -sn PYR_2 -sn PYR_3 -sn PYR_4 -sn PYR_5 -sn PYR_6 -sn PYR_7 \
+-sn ROS_1 -sn ROS_2 -sn ROS_3 -sn ROS_4 -sn ROS_5 -sn ROS_6 -sn ROS_7 -sn ROS_8 \
+-sn RUZ_1 \
+-sn SAL_3 -sn SAL_4 -sn SAL_6 \
+-sn STE_1 -sn STE_2 -sn STE_3 -sn STE_4 -sn STE_5 -sn STE_6 -sn STE_7 -sn STE_8 \
+-sn STO_1 -sn STO_2 -sn STO_3 -sn STO_4 \
+-sn VEG_3 -sn VEG_4 \
+-sn VIL_1 -sn VIL_2 -sn VIL_3 -sn VIL_4 -sn VIL_5 -sn VIL_6 -sn VIL_7 -sn VIL_8 \
+-sn WOL_2 -sn WOL_6 -sn WOL_9 -sn WOL_10 \
+-O /gpfs01/home/mzywj2/LNL_filtered.vcf
