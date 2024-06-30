@@ -62,7 +62,8 @@ pcs <- data.frame(PC1=pc$x[,1],PC2=pc$x[,2],id=colnames(df),ploidy=x)
 ggplot(pcs, aes(PC1, PC2, color=as.factor(ploidy)))+
   geom_point(size=7)+
   labs(x=xlab, y=ylab, color="Ploidy")+
-  # geom_text_repel(aes(label=id), size=4, force=20, color="black")+ # This line is edited out to remove the labels from the PCA plot 
+  # geom_text_repel(aes(label=id), size=4, force=20, color="black", max.overlap = 25)+    # This line is edited out to remove the labels from the PCA plot 
+  ggtitle("LNL population PCA Plot")+                                                     # This line was added to include a title for the plot
   theme(panel.background = element_blank(),
 		panel.grid.major=element_blank(), 
 		panel.grid.minor=element_blank(), 
@@ -71,8 +72,8 @@ ggplot(pcs, aes(PC1, PC2, color=as.factor(ploidy)))+
 		axis.text=element_text(size=11,color="black"),
 		axis.ticks.length=unit(.15, "cm"),
 		axis.ticks=element_line(color="black",size=0.5),
-		axis.title=element_text(size=12, color="black"),
-		plot.title=element_text(size=14, color="black", hjust = 0.5),
+		axis.title=element_text(size=20, color="black"),                         # Altered the size from original 12 to 20
+		plot.title=element_text(size=16, color="black", hjust = 0.5),            # Altered the size from original 14 to 16
 		legend.text=element_text(size=11, color="black"),
 		legend.title=element_text(size=12, color="black"),
 		legend.key=element_blank(),
