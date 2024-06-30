@@ -1,3 +1,0 @@
-# After the compleasm has been carried out on the purged assembly fasta files for the hap2 and the ctg primary
-# The *out files for them can be analysed and compared between the initial compleasm *out files for hap2 and ctg primary
-# Then the N50.sh script is again executed for the new compleasms on the purged assemblies for further information and comparison metrics 
