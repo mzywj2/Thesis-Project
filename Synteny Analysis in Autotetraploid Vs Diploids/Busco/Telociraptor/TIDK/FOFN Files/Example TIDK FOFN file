@@ -1,9 +1,0 @@
-C_officinalis C_officinalis_telomeric_repeat_windows.csv
-C_groenlandica C_groenlandica_telomeric_repeat_windows.csv
-
-# Ensure that the tidk files for the relevant comparisons are all in the same R studios directory as the chromsyn.R and rje_load.R scripts as this eliminates any potential errors and the need for defining the path to the files
-
-# If however the files are located in a separate directory, the layout of the fofn file should follow this:
-
-C_officinalis /absolute/path/to/C_officinalis_telomeric_repeat_windows.csv
-C_groenlandica /absolute/path/to/C_groenlandica_telomeric_repeat_windows.csv
