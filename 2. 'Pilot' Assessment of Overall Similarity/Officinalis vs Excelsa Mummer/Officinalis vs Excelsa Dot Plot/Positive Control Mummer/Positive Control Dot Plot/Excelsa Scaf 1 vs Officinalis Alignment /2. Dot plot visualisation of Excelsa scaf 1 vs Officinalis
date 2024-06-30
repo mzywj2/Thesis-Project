@@ -1,0 +1,4 @@
+# Run the command
+python DotPrep.py --delta p_ctg_vs_excelsa_scaf1.delta --out
+
+# The output files will be *.cord and *cord.index and these should be inputted into sandbox for dot plot visualisation
