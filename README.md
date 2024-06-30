@@ -45,6 +45,7 @@ There are slight changes in the script that have been mentioned in the PCA Plot 
 * Minimap2: Version 2.28
 * Mummer4: Version 4.0.0
 * Purge_dups: Version 1.2.6
+* Samtools: Version 1.20
 * Telociraptor: Version 0.8.0
 * TIDK: Version 0.2.41
 
@@ -213,6 +214,21 @@ This step of the analysis also requires the installation of python and numpy in 
 
 For further detail regarding MUMmer4, refer to the MUMmer4 GitHub Repository: https://github.com/mummer4/mummer.git 
 
+
+### Samtools: 
+
+```
+# Create samtools environment
+conda create samtools -c bioconda samtools
+
+# Activate the environment
+conda activate samtools
+
+```
+
+#### Example Usage:
+
+`samtools faidx `
 
 ### Telociraptor: 
 
