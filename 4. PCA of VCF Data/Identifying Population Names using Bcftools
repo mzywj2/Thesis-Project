@@ -1,0 +1,5 @@
+# Activate the bcftools environment
+conda activate bcftools
+
+# Run the bcftools command on the command line to get a list of the population names in the vcf
+bcftools query -l 4dg_s1to6_bi_best_snps_pruned.ann.vcf
