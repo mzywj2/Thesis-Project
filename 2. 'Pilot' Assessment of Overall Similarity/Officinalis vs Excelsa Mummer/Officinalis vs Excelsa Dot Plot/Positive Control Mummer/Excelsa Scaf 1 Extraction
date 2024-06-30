@@ -1,0 +1,17 @@
+# Activate the samtools environment if not already activated
+conda activate samtools
+
+# Run the samtools faidx command on the excelsa fasta file
+samtools faidx C_excelsa_V5.fa.masked.fa
+
+# Produce a txt file containing the scaffold sizes of the excelsa fasta file
+awk '{print $1, $2}' C_excelsa_V5.fa.masked.fa.fai > scaffold_sizes.txt
+
+# Sort this txt file in descending order of size
+sort -k2, 2nr scaffold_sizes.txt > sorted_scaffold_sizes.txt
+
+# Identify the first scaffold, which is the largest scaffold
+head -n 1 sorted_scaffold_sizes.txt
+
+# Run the samtools command to produce a fasta file containing only the Excelsa scaffold 1 
+samtools faidx C_excelsa_V5.fa.masked.fa C_excelsa_scaf_1 > Cexcelsa_scaf_1.fa
