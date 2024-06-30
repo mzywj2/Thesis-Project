@@ -1,0 +1,5 @@
+# The output files produced by running the dotprep.py file on the delta files produces *.cord and *.cord.index output files. These files can be inputted into sandbox: https://dot.sandbox.bio/ 
+# This produces a dot plot alignment graph between the two genomes for visualisation
+
+
+# In this study, the alignment was very bad, therefore we conducted a positive control between Scaffold 1 (biggest scaffold of Excelsa against Cochlearia Groenlandica)
