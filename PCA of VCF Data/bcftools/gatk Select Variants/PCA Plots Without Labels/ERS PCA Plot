@@ -73,7 +73,7 @@ ggplot(pcs, aes(PC1, PC2, color=as.factor(ploidy)))+
 		axis.ticks.length=unit(.15, "cm"),
 		axis.ticks=element_line(color="black",size=0.5),
 		axis.title=element_text(size=20, color="black"),                        # Altered the size of the text from (original) 12 to 20
-		plot.title=element_text(size=16, color="black", hjust = 0.5),           # Altered the size of the text from (original) 12 to 26
+		plot.title=element_text(size=16, color="black", hjust = 0.5),           # Altered the size of the text from (original) 12 to 16
 		legend.text=element_text(size=11, color="black"),
 		legend.title=element_text(size=12, color="black"),
 		legend.key=element_blank(),
