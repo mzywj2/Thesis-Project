@@ -1,4 +1,4 @@
 # Run the dotprep.py file on the delta output file of mummer
-python dotprep.py --delta groen_vs_excelsa_scaf1.delta --out 
+python DotPrep.py --delta groen_vs_excelsa_scaf1.delta --out 
 
 # The output produces a *.cord and *.cord.index file which can be inputted into sandbox for dot plot visualisation
