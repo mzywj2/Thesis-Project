@@ -5,7 +5,7 @@ library(vcfR)
 library(ggplot2)
 library(ggrepel)
 
-vcf <- read.vcfR("ROT_filtered.vcf") #Filtered and LD-pruned VCF file
+vcf <- read.vcfR("/absolute/path/to/ROT_filtered.vcf") #Filtered and LD-pruned VCF file
 
 #Transform VCF to numeric genotypes
 df <- extract.gt(vcf)
