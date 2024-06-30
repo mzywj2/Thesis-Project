@@ -1,0 +1,6 @@
+# As mentioned in the chromsyn github page, to reduce errors and for compatibility with the chromsyn tool the busco files should follow this naming pattern:
+
+genome_name.busco5.tsv
+e.g. C_officinalis.busco5.tsv
+
+The original .tsv file output from busco will likely be called full_table.tsv, this is the file that will be used
