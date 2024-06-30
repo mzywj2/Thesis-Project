@@ -63,7 +63,7 @@ ggplot(pcs, aes(PC1, PC2, color=as.factor(ploidy)))+
   geom_point(size=7)+
   labs(x=xlab, y=ylab, color="Ploidy")+
   # geom_text_repel(aes(label=id), size=4, force=20, color="black", max.overlaps = 25)+   # This line is edited out to remove the labels from the PCA plot 
-  ggtitle("TRO population PCA Plot")+                                                     # This line was added to include a title for the plot
+  ggtitle("ERS population PCA Plot")+                                                     # This line was added to include a title for the plot
   theme(panel.background = element_blank(),
 		panel.grid.major=element_blank(), 
 		panel.grid.minor=element_blank(), 
