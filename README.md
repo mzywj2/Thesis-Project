@@ -216,6 +216,7 @@ For further detail regarding MUMmer4, refer to the MUMmer4 GitHub Repository: ht
 
 
 ### Samtools: 
+Samtools allows users to perform a wide range of tasks, including sorting, merging, and indexing alignments, as well as variant calling and data visualisation. 
 
 ```
 # Create samtools environment
@@ -228,7 +229,7 @@ conda activate samtools
 
 #### Example Usage:
 
-`samtools faidx `
+`samtools faidx reference.fasta scaffold_1_reference.fasta > new_scaf_1_reference.fasta`
 
 ### Telociraptor: 
 
