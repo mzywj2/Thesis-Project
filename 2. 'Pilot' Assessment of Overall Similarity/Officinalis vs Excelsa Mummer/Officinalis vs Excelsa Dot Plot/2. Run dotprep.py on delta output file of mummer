@@ -1,0 +1,2 @@
+# Mummer produces a delta file output, the dotprep.py file should be run on this delta output file
+python dotprep.py -- delta 
