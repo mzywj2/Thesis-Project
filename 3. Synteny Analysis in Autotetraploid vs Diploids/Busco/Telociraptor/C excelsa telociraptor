@@ -1,0 +1,10 @@
+#activate the environment if not already activated
+conda activate telociraptor_env
+
+# navigate to the directory that has the .py file and then run the command on the command line
+python telociraptor.py -seqin /gpfs01/home/mzywj2/C_excelsa_V5.fa.masked.fa -basefile C_exc i=-1 tweak=F telonull=T
+
+# The output files will be located in the same directory as the .py file
+# The relevant output files end in *gaps.tdt and *telomeres.tdt
+# Name them C_excelsa.gaps.tdt and C_excelsa.telomeres.tdt
+# Move them into a new directory in R studios, ready for use by chromsyn
