@@ -1,10 +1,10 @@
 # Thesis-Project: Comparative Genomic Analysis of Cochlearia Officinalis and Diploid Cochlearia Species
 
-This project involves the comprehensive analysis of genome assemblies for the autotetraploid species *Cochlearia officinalis*. Two types of HiFi assemblies were initially provided for the same species and their genome completeness was evaluated to determine the optimal assembly for downstream analysis. Quality assessments were conducted using Compleasm, N50.sh, and Purge Dups, leading to the selection of the best reference genome from six assemblies. This reference genome was then utilised for synteny analysis against various *Cochlearia* diploid species to identify the parent species through Chromsyn analysis, producing synteny plots for each diploid comparison. Additionally, leveraging a VCF dataset, we identified five autotetraploid populations of C. officinalis and conducted PCA with each tetraploid population against 26 diploid populations (145 individual samples) to assess geographical closeness and species relatedness.  This multi-faceted approach aims to elucidate the genetic similarity/variations of *Cochlearia Officinalis* against other *Cochlearia* diploid species to ultimatley try and identify the parental lineage of *Cochlearia Officinalis*. 
+This project involves the comprehensive analysis of genome assemblies for the autotetraploid species *Cochlearia officinalis*. Two types of HiFi assemblies were initially provided for the same species and their genome completeness was evaluated to determine the optimal assembly for downstream analysis. Quality assessments were conducted using Compleasm, N50.sh, and Purge Dups, leading to the selection of the best reference genome from six assemblies. This reference genome was then utilised for synteny analysis against various *Cochlearia* diploid species to identify the parent species through Chromsyn analysis, producing synteny plots for each diploid comparison. Additionally, leveraging a VCF dataset, we identified five autotetraploid populations of *C. officinalis* and conducted principal component analysis (PCA) with each tetraploid population against 26 diploid populations (145 individual samples) to assess geographical closeness and species relatedness. *C.officinalis* is the progenitor of the autopolyploid *C.anglica* and one of the parent species of the allohexaploid *C.hollandica* (Brandrud M K, 2014), therefore identifying the parental lineage of *C.officinalis* not only allows us to comprehend the genetic makeup of itself but also the genomes of its descendants. Previous studies have hypothesised that the diploid *C.pyrenica* is likely the progenitor of *C.officinalis*, yet the autotetraploid nature of *C.officinalis* presents challenges in identifying its parental lineage due to significant genome reorganisation which occurs in autopolyploids (Parisod et al., 2010). However, this multi-faceted approach aims to elucidate the genetic similarity/variations of *Cochlearia Officinalis* against other *Cochlearia* diploid species by employing whole genome synteny analysis and (PCA) to trace evolutionary history to ultimatley try and identify the parental lineage of *Cochlearia Officinalis*. 
 
 
 ## Inital HiFi Assembly Data
-2 types of HiFi assembly data were provided from the same autotetraploid species to initally conduct genome completeness analysis and indentify which assembly should be used for downstream analysis and comparison against the diploid species - The 2 types of HiFi assembly data include:
+2 types of HiFi assembly data were provided from the same autotetraploid species to initally conduct genome completeness analysis and identify which assembly should be used for downstream analysis and comparison against the diploid species - The 2 types of HiFi assembly data include:
 
 #### 1: HiFi Assembly of the C.Officinalis WITHOUT the --primary flag:
 * COFF001.asm.bp.hap1.p_ctg.gfa
@@ -291,7 +291,7 @@ For further detail regarding TIDK, refer to the TIDK GitHub Repository: https://
 
 ### Chromsyn:
 
-Chromsyn is an R studios tool used for the comparative analysis and visualization of chromosome synteny, which refers to the preserved order of genes on chromosomes of different species or within different assemblies of the same species.It helps in identifying and analyzing regions of conserved gene order, structural variations, and rearrangements between genomes.
+Chromsyn is an R studios tool used for the comparative analysis and visualization of chromosome synteny, which refers to the preserved order of genes on chromosomes of different species or within different assemblies of the same species.It helps in identifying and analysing regions of conserved gene order, structural variations, and rearrangements between genomes.
 
 Since Chromsyn is used in R, it does not have specific installation steps, however if these instructions below are followed, Chromsyn will run without error: 
 - Create a directory in R
@@ -314,7 +314,7 @@ C_officinalis /absolute/path/to/the/file/C_officinalis_telomeric_repeat_windows.
 #### To run chromsyn:
 
 In the R terminal (not the console), run the command `Rscript chromsyn.R`
-- If the output pdf or png file do not produce an image of a proper synteny plot, then re-run the command with this addition: `Rscript chromsyn.R orphans=F` (Personally recommended to me by the creator of the tool, Richard Edwards)
+- If the output pdf or png file do not produce an image of a proper synteny plot (as the example given in the Chromsyn GitHub page), then re-run the command with this addition: `Rscript chromsyn.R orphans=F` (Personally recommended to me by the creator of the tool, Richard Edwards)
 - The `orphans=F` argument removes from the plot any sequences that do not have syntenic regions, it will remove all the short contigs/scaffolds that lack BUSCO genes. Since the genomes used in this study were very large and more diverse than expected, this argument was required to produce a proper synteny plot
 
 For further details regarding Chromsyn, refer to the Chromsyn GitHub Repository: https://github.com/slimsuite/chromsyn.git
@@ -410,3 +410,7 @@ Chromysn:
 Compleasm: Huang N, Li H. (2023) Compleasm: a faster and more accurate reimplementation of BUSCO. *Bioinformatics*. Volume 39, Issue 10. [https://academic.oup.com/bioinformatics/article/39/10/btad595/7284108?login=false]
 
 N50.sh: [https://github.com/hcdenbakker/N50.sh.git]
+
+Brandrud M K (2014) Polyploidy and Ecotypic Variation in Cochlearia Officinalis L. and Related Species. Master of Science Thesis. Department of Biosciences, University of Oslo. [https://core.ac.uk/download/pdf/30902961.pdf]
+
+Parisod C, Holderegger R and Brochmann C (2010) Evolutionary Consequences of Autopolyploidy. New Phytologist. Volume 186, Issue 1, Pgs. 5-17. [https://doi.org/10.1111/j.1469-8137.2009.03142.x]
