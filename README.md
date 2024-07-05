@@ -322,6 +322,10 @@ In the R terminal (not the console), run the command `Rscript chromsyn.R`
 - If the output pdf or png file do not produce an image of a proper synteny plot (as the example given in the Chromsyn GitHub page), then re-run the command with this addition: `Rscript chromsyn.R orphans=F` (Personally recommended to me by the creator of the tool, Richard Edwards)
 - The `orphans=F` argument removes from the plot any sequences that do not have syntenic regions, it will remove all the short contigs/scaffolds that lack BUSCO genes. Since the genomes used in this study were very large and more diverse than expected, this argument was required to produce a proper synteny plot
 
+
+- An additional output file of Chromsyn is the excel file for each run which contains information about the busco genes and the hit lengths for the synteny analysis. In this project, for each analysis the total hit lengths from the Regions sheet of the file, were calculated to provide a quantitative measure of the proportion of synteny that was present between each genome comparison.
+
+  
 For further details regarding Chromsyn, refer to the Chromsyn GitHub Repository: https://github.com/slimsuite/chromsyn.git
 
 ### Bcftools:
