@@ -30,6 +30,9 @@ In this VCF the relevant tetraploid populations that will be extracted and compa
 * ROT Population - ROT_7
 * FTW Population - FTW_3
 
+The populations identified and utilised in this study were from the Dataset S2 Sample Metrics - from supplementary dataset S2 of Bray et al., 2023: 
+Sian Bray, Hamala T, Zhou M, Busoms S, Fischer S, Desjardins S D, Mandakova T, Moore C, Mathers T C, Cowan L, Monnahan P, Koch J, Wolf E M, Lysak M A, Kolar F, Higgins J D, Koch M A, Yant L (2023) Kinetochore and Ionomic Adaptation to Whole Genome Duplication. bioRxiv. [https://www.biorxiv.org/content/10.1101/2023.09.27.559727v1.full]
+
 ### PCA Script:
 
 The script used to produce the PCA plots is the est_cov_pca.R script by Toumas Hamala, April 2024 - GitHub Repository: https://github.com/thamala/polySV.git
