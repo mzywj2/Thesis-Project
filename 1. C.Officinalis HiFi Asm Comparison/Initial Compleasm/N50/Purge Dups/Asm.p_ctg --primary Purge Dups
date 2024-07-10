@@ -29,7 +29,7 @@ STATS="PB.stat" # This file will be an output file from the pbcstat command and 
 CUTOFFS="asm_p_ctg_primary_cutoffs"
 DUPS="primary_p_ctg_dups.bed"
 PURGED_ASSEMBLY="primary_ctg_purged_assembly.fasta"
-BASE_COV="PB.base.cov" # This file will be an output file from the pbcstat you need to locate that file and refer to the right name for it
+BASE_COV="PB.base.cov" # This file will be an output file from the pbcstat which needs to be located and referred to the right name for it
 
 # Run minimap2 to get alignments
 minimap2 -x map-hifi -t 32 $ASSEMBLY $READS | gzip -c - > $ALIGNMENTS
