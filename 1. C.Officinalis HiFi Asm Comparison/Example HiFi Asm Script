@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --job-name=hifiasm_COFF001_1.sh
+#SBATCH --partition=hmemq
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=96
+#SBATCH --mem=1495g
+#SBATCH --time=168:00:00
+#SBATCH --output=/share/Yant_Group_Shared/Kavithi/%x.out
+#SBATCH --error=/share/Yant_Group_Shared/Kavithi/%x.err
+
+source $HOME/.bash_profile
+echo STARTED `date`
+
+cd /path/to/directory
+
+# Activate conda environment
+conda activate hifiasm
+
+# Run the hifiasm command
+hifiasm -o COFF001.asm -t 96 /path/to/fastq/file/COFF001.fastq.gz
+
+# To run the assembly with the --primary flag
+# hifiasm -o primary/COFF001.asm -t 96 --primary /path/to/fastq/file/COFF001.fastq.gz
+
+# This step of the analysis was not conducted by me (Kavithi), the genome assemblies were provided by Professor Levi Yant. This script is to provide an exmaple of how to generate the input files that will be used in this project.
