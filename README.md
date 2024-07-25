@@ -197,6 +197,10 @@ For further detail regarding Purge dups, refer to the Purge dups GitHub Reposito
 
 This script is used to evaluate more quality metrics for the HiFi assemblies and this script is from: [https://github.com/hcdenbakker/N50.sh.git] 
 
+#### Example Usage:
+
+`./N50.sh genome.fasta`
+
 
 ### Mummer4:
 
@@ -238,6 +242,8 @@ conda activate samtools
 #### Example Usage:
 
 `samtools faidx reference.fasta scaffold_1_reference.fasta > new_scaf_1_reference.fasta`
+
+
 
 ### Telociraptor: 
 
@@ -322,8 +328,11 @@ C_officinalis /absolute/path/to/the/file/C_officinalis_telomeric_repeat_windows.
 #### To run chromsyn:
 
 In the R terminal (not the console), run the command `Rscript chromsyn.R`
-- If the output pdf or png file do not produce an image of a proper synteny plot (as the example given in the Chromsyn GitHub page), then re-run the command with this addition: `Rscript chromsyn.R orphans=F` (Personally recommended to me by the creator of the tool, Richard Edwards)
+- If the output pdf or png file do not produce an image of a proper synteny plot (as the example given in the Chromsyn GitHub page), then re-run the command with this addition: `Rscript chromsyn.R orphans=F` (Personally recommended to me by the creator of the tool, Richard Edwards) - This will produce synteny plots which have chromosome reversals
+- To remove the chromosome reversals use the command `Rscript chromsyn.R orphans=F orient=none focus=C_officinalis`
 - The `orphans=F` argument removes from the plot any sequences that do not have syntenic regions, it will remove all the short contigs/scaffolds that lack BUSCO genes. Since the genomes used in this study were very large and more diverse than expected, this argument was required to produce a proper synteny plot
+- The `orient=none` removes chromosome reversals and sets all the chromosomes in their original orientation
+- The `focus=C_officinalis` sets the focal genome as C.officinalis to ensure standardisation of the analyses
 
 
 - An additional output file of Chromsyn is the excel file for each run which contains information about the busco genes and the hit lengths for the synteny analysis. In this project, for each analysis the total hit lengths from the Regions sheet of the file, were calculated to provide a quantitative measure of the proportion of synteny that was present between each genome comparison.
@@ -409,7 +418,7 @@ A[Diploids & Tetraploid fasta files] --> B[Busco];
     D --> E[Convert TIDK tsv file to csv];
     E --> F[Produce FOFN files for the input files];
     F --> G[Download chromsyn.R and rje_load.R scripts into R studios directory];
-    G --> H[Rscript chromsyn.R orphans=F];
+    G --> H[Rscript chromsyn.R orphans=F orient=none focus=C_officinalis];
     H --> I[Output synteny plot];
 
 ```
