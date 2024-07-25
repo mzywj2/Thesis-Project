@@ -208,7 +208,7 @@ This script is used to evaluate more quality metrics for the HiFi assemblies and
 
 ### Mummer4:
 
-MUMmer4 is designed for efficient and accurate alignment of large DNA or RNA sequences. It is commonly used to compare genomes or long-read sequencing data and it provides tools for aligning entire genomes, identifying similarities and differences, and visualizing genomic data.
+MUMmer4 is designed for efficient and accurate alignment of large DNA or RNA sequences. It is commonly used to compare genomes or long-read sequencing data and it provides tools for aligning entire genomes, identifying similarities and differences, and visualising genomic data.
 
 ```
 # Create mummer4 environment 
@@ -221,7 +221,7 @@ conda activate mummer4_env
 
 This step of the analysis also requires the installation of python and numpy in the mummer4_env (activate this environment first):
 
-` conda install python`  
+`conda install python`  
 `conda install numpy`
 
 #### Example Usage:
