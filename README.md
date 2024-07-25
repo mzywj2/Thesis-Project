@@ -2,7 +2,7 @@
 
 This project involves the comprehensive analysis of genome assemblies for the autotetraploid species *Cochlearia officinalis*. Two types of HiFi assemblies were initially provided for the same species and their genome completeness was evaluated to determine the optimal assembly for downstream analysis. Quality assessments were conducted using Compleasm, N50.sh, and Purge Dups, leading to the selection of the best reference genome from six assemblies. This reference genome was then utilised for synteny analysis against various *Cochlearia* diploid species to identify the parent species through Chromsyn analysis, producing synteny plots for each diploid comparison. Additionally, leveraging a VCF dataset, we identified five autotetraploid populations of *C. officinalis* and conducted principal component analysis (PCA) with each tetraploid population against 26 diploid populations (145 individual samples) to assess geographical closeness and species relatedness. 
 
-*C.officinalis* is the progenitor of the autopolyploid *C.anglica* and one of the parent species of the allohexaploid *C.hollandica* (Brandrud M K, 2014), therefore identifying the parental lineage of *C.officinalis* not only allows us to comprehend the genetic makeup of itself but also the genomes of its descendants. Previous studies have hypothesised that the diploid *C.pyrenica* is likely the progenitor of *C.officinalis*, yet the autotetraploid nature of *C.officinalis* presents challenges in identifying its parental lineage due to significant genome reorganisation which occurs in autopolyploids (Parisod et al., 2010). However, this multi-faceted approach aims to elucidate the genetic similarity/variations of *Cochlearia Officinalis* against other *Cochlearia* diploid species by employing whole genome synteny analysis and (PCA) to trace evolutionary history to ultimatley try and identify the parental lineage of *Cochlearia Officinalis*. 
+*C.officinalis* inhabits coastal environments such as salt marshes, coastal cliffs and rocky shores, therefore considering this it can be considered an indicator species of saline environments, therefore understanding the genetic makeup may help to monitor the impact of environment changes such as rising sea levels or salinity increase due to climate change thus offering early warnings of ecosystem health and guiding conservation. Additionally, *C.officinalis* is the progenitor of the autopolyploid *C.anglica* and one of the parent species of the allohexaploid *C.hollandica* (Brandrud M K, 2014), therefore identifying the parental lineage of *C.officinalis* not only allows us to comprehend the genetic makeup of itself but also the genomes of its descendants. Previous studies have hypothesised that the diploid *C.pyrenica* is likely the progenitor of *C.officinalis*, yet the autotetraploid nature of *C.officinalis* presents challenges in identifying its parental lineage due to significant genome reorganisation which occurs in autopolyploids (Parisod et al., 2010). However, this multi-faceted approach aims to elucidate the genetic similarity/variations of *Cochlearia Officinalis* against other *Cochlearia* diploid species by employing whole genome synteny analysis and (PCA) to trace evolutionary history to ultimatley try and identify the parental lineage of *Cochlearia Officinalis*. 
 
 
 ## Inital HiFi Assembly Data
@@ -41,7 +41,11 @@ The script used to produce the PCA plots is the est_cov_pca.R script by Toumas H
 There are slight adjustments to the script that have been mentioned in the PCA Plot folder scripts - removal of the geom_repel line to remove the labels in one output as well as the adjustment of the ggtitle, axis.title size and plot.title size. 
 
 #### Note:
-The input files required for this analysis are genome fasta files which are too large to be shared on this GitHub page, therefore full permission has been granted to the location of these files on ada: /gpfs01/home/mzywj2
+The input files required for this analysis are genome fasta files which are too large to be shared on this GitHub page, therefore full permission has been granted to the location of these files on ada: 
+
+```
+/gpfs01/home/mzywj2
+```
 
 ## Dependencies:
 * Bcftools: Version 1.20
