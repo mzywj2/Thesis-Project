@@ -9,14 +9,15 @@ This project involves the comprehensive analysis of genome assemblies for the au
 2 types of HiFi assembly data were provided from the same autotetraploid species to initally conduct genome completeness analysis and identify which assembly should be used for downstream analysis and comparison against the diploid species - The 2 types of HiFi assembly data include:
 
 #### 1: HiFi Assembly of the C.Officinalis WITHOUT the --primary flag:
-* COFF001.asm.bp.hap1.p_ctg.gfa -> 
-* COFF001.asm.bp.hap2.p_ctg.gfa 
-* COFF001.asm.bp.p_ctg.gfa
+* ##### COFF001.asm.bp.hap1.p_ctg.gfa ->
+This file contains the phased contig graph for haplotype 1
+* ##### COFF001.asm.bp.hap2.p_ctg.gfa -> This file contains the phased contig graph for haplotype 2
+* ##### COFF001.asm.bp.p_ctg.gfa -> This file contains the primary assembly graph
 
 #### 2: HiFi Assembly of the C.Officinalis WITH the --primary flag:
-* COFF001.asm.p_utg.gfa
-* COFF001.asm.p_ctg.gfa
-* COFF001.asm.a_ctg.gfa
+* COFF001.asm.p_utg.gfa -> This file contains the unitig graph. Unitigs are shorter sequence units assembled before scaffolding into contigs
+* COFF001.asm.p_ctg.gfa -> This file contains the primary contig graph. These are more contiguous sequences assembled from unitigs as it it includes an extra joining step to merge the two haplotypes.
+* COFF001.asm.a_ctg.gfa -> This file contains the alternate contig graph. This assembly consists of all contigs that are discarded in primary contig graph.
 
 #### These GFA files were converted to FASTA format for downstream analysis: 
 `awk '/^S/{print ">"$2;print $3}' input.gfa  > output.fa`
