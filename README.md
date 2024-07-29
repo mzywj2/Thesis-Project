@@ -329,6 +329,8 @@ C_groenlandica C_groenlandica_telomeric_repeat_windows.csv
 - However, if you chose to place the input files in a different directory then the paths to those files should be written in the fofn file e.g:
 C_officinalis /absolute/path/to/the/file/C_officinalis_telomeric_repeat_windows.csv
 
+##### ChromSyn Example Files contains an example comparison for *C.officinalis* and *C.excelsa* and the relevant files to conduct the analysis as well as an example output PNG file, sans the Chromsyn.R and rje_load.R files
+
 #### To run chromsyn:
 
 In the R terminal (not the console), run the command `Rscript chromsyn.R`
