@@ -9,7 +9,7 @@ This project involves the comprehensive analysis of genome assemblies for the au
 2 types of HiFi assembly data were provided from the same autotetraploid species to initally conduct genome completeness analysis and identify which assembly should be used for downstream analysis and comparison against the diploid species - The 2 types of HiFi assembly data include:
 
 #### 1: HiFi Assembly of the C.Officinalis WITHOUT the --primary flag:
-* COFF001.asm.bp.hap1.p_ctg.gfa
+* COFF001.asm.bp.hap1.p_ctg.gfa -> 
 * COFF001.asm.bp.hap2.p_ctg.gfa 
 * COFF001.asm.bp.p_ctg.gfa
 
