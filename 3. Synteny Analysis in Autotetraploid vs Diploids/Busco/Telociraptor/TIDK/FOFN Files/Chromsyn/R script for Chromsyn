@@ -19,4 +19,4 @@
 Rscript chromsyn.R
 
 # However, if the plot does not look like a proper synteny plot as the example given in the Chromsyn GitHub page, then add this argument to the command. This argument will remove from the plot any sequences that do not have syntenic regions. 
-Rscript chromsyn.R orphans=f
+Rscript chromsyn.R orphans=f orient=none focus=C_officinalis
