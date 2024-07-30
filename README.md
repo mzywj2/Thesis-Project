@@ -8,20 +8,20 @@ This project involves the comprehensive analysis of genome assemblies for the au
 ## Inital HiFi Assembly Data
 2 types of HiFi assembly data were provided from the same autotetraploid species to initally conduct genome completeness analysis and identify which assembly should be used for downstream analysis and comparison against the diploid species - The 2 types of HiFi assembly data include:
 
-#### 1: HiFi Assembly of the C.Officinalis WITHOUT the --primary flag:
-* ##### COFF001.asm.bp.hap1.p_ctg.gfa ->
+### 1: HiFi Assembly of the *C.officinalis* WITHOUT the --primary flag:
+* ##### COFF001.asm.bp.hap1.p_ctg.gfa 
 This file contains the partially phased contig graph for haplotype 1
-* ##### COFF001.asm.bp.hap2.p_ctg.gfa ->
+* ##### COFF001.asm.bp.hap2.p_ctg.gfa 
 This file contains the partially phased contig graph for haplotype 2
-* ##### COFF001.asm.bp.p_ctg.gfa ->
+* ##### COFF001.asm.bp.p_ctg.gfa 
 This file contains the primary assembly graph
 
-#### 2: HiFi Assembly of the C.Officinalis WITH the --primary flag:
-* ##### COFF001.asm.p_utg.gfa ->
+### 2: HiFi Assembly of the *C.officinalis* WITH the --primary flag:
+* ##### COFF001.asm.p_utg.gfa 
 This file contains the unitig graph. Unitigs are shorter sequence units assembled before scaffolding into contigs
-* ##### COFF001.asm.p_ctg.gfa ->
+* ##### COFF001.asm.p_ctg.gfa 
 This file contains the primary contig graph. These are more contiguous sequences assembled from unitigs as it it includes an extra joining step to merge the two haplotypes.
-* ##### COFF001.asm.a_ctg.gfa ->
+* ##### COFF001.asm.a_ctg.gfa 
 This file contains the alternate contig graph. This assembly consists of all contigs that are discarded in primary contig graph.
 
 #### These GFA files were converted to FASTA format for downstream analysis: 
@@ -327,11 +327,8 @@ Since Chromsyn is used in R, it does not have specific installation steps, howev
 - Busco full_table.tsv output file - alter the file name to $genome_busco5.tsv ($genome: change the prefix respectively for each genome you analyse e.g. C_officinalis_busco5.tsv)
 - Telociraptor *gaps.tdt and *telomeres.tdt - alter the prefix of the file name respectively for each genome
 - TIDK output tsv converted to a csv - *telomeric_repeat_windows.csv - alter the prefix of the file name respectively for each genome
-- FOFN (file of file names) files for each of the input files - busco.fofn, gaps.fofn, sequences.fofn (for the *telomeres.tdt files) and tidk.fofn. If, as recommended above all the input files are placed in the same directory as the chromsyn.R script then the fofn file layout should look like this:
+- FOFN (file of file names) files for each of the input files - busco.fofn, gaps.fofn, sequences.fofn (for the *telomeres.tdt files) and tidk.fofn. If, as recommended above all the input files are placed in the same directory as the chromsyn.R script then an example of the fofn file layout is available in the Chromsyn Eaxmple Files directory:
 
-C_officinalis C_officinalis_telomeric_repeat_windows.csv
-
-C_groenlandica C_groenlandica_telomeric_repeat_windows.csv
 - However, if you chose to place the input files in a different directory then the paths to those files should be written in the fofn file e.g:
 C_officinalis /absolute/path/to/the/file/C_officinalis_telomeric_repeat_windows.csv
 
